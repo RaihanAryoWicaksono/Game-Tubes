@@ -1,0 +1,19 @@
+[gd_scene format=2]
+
+[node name="Wave1" type="Node2D"]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2( 48, 88 )
+
+[node name="Position2D2" type="Marker2D" parent="."]
+position = Vector2( 156, 152 )
+
+[node name="Position2D3" type="Marker2D" parent="."]
+position = Vector2( 266, 88 )
+
+[node name="Position2D4" type="Marker2D" parent="."]
+position = Vector2( 58, 40 )
+
+[node name="Position2D5" type="Marker2D" parent="."]
+position = Vector2( 268, 38 )
+
