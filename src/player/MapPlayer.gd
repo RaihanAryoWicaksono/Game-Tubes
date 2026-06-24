@@ -4,32 +4,32 @@ var controls = []
 var commands = {
 	"move_jump" : {
 		"flag" : false,
-		"input" : [KEY_K, JOY_BUTTON_0],
+		"input" : [KEY_K, JOY_BUTTON_A],
 		"id" : "jump"
 	},
 	"look_up" : {
 		"flag" : false,
-		"input" : [KEY_W, JOY_DPAD_UP],
+		"input" : [KEY_W, JOY_BUTTON_DPAD_UP],
 		"id" : "look_up"
 	},
 	"look_down" : {
 		"flag" : false,
-		"input" : [KEY_S, JOY_DPAD_DOWN],
+		"input" : [KEY_S, JOY_BUTTON_DPAD_DOWN],
 		"id" : "look_down"
 	},
 	"shoot" : {
 		"flag" : false,
-		"input" : [KEY_J, JOY_BUTTON_2],
+		"input" : [KEY_J, JOY_BUTTON_X],
 		"id" : "shoot"
 	},
 	"move_left" : {
 		"flag" : false,
-		"input" : [KEY_A, JOY_DPAD_LEFT],
+		"input" : [KEY_A, JOY_BUTTON_DPAD_LEFT],
 		"id" : "left"
 	},
 	"move_right" : {
 		"flag" : false,
-		"input" : [KEY_D, JOY_DPAD_RIGHT],
+		"input" : [KEY_D, JOY_BUTTON_DPAD_RIGHT],
 		"id" : "right"
 	},
 }
@@ -263,11 +263,10 @@ signal game_over()
 signal health_down()
 
 func get_hurt():
-	if $hitbox.monitoring == false:
+	if not $hitbox.monitoring:
 		pass
 	else:
-		
-		remove_child($hitbox)
+		$hitbox.set_deferred("monitoring", false)
 		health -= 1
 		if health <= 0:
 			change_anim("die")
@@ -277,7 +276,7 @@ func get_hurt():
 			$hurt_player.play("hurt")
 			emit_signal("health_down")
 			$hurt_stream.play()
-	
+
 
 func play_pick_up_sound():
 	
@@ -296,13 +295,6 @@ func _on_hitbox_body_entered(body):
 	if body.get_groups().has("enemy"):
 		get_hurt()
 
-var isInvulnerable = false
-
-@onready var hitbox_ref = $hitbox.duplicate()
-
 func _on_hurt_player_animation_finished(anim_name):
 	if anim_name == "hurt":
-		var newHitbox = hitbox_ref.duplicate()
-		add_child(newHitbox)
-		newHitbox.set_name("hitbox")
-		newHitbox.connect("body_entered", Callable(self, "_on_hitbox_body_entered"))
+		$hitbox.set_deferred("monitoring", true)

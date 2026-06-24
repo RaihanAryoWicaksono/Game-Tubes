@@ -25,11 +25,9 @@ func create_many_coins(pos, amount):
 	
 
 func create_coin(coin, start_pos):
-	
-	$coins.add_child(coin)
-	
 	coin.set_position(start_pos)
 	coin.connect("collected", Callable(self, "get_coin_points"))
+	$coins.call_deferred("add_child", coin)
 	
 
 var points = 0

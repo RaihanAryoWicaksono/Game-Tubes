@@ -7,6 +7,7 @@ var player = null
 var speed = 300
 
 signal collected(self_ref)
+var is_collected = false
 
 func _ready():
 	randomize()
@@ -26,11 +27,11 @@ func _process(d):
 	time_cont += d
 
 
-var collected = false
 
 func _on_coin_body_entered(body):
 	if body.get_groups().has("player"):
-		if !collected:
+		if !is_collected:
+			is_collected = true
 			emit_signal("collected", self)
 			hide()
 			queue_free()
