@@ -1,7 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1782298695
-default_env.tres::Environment::2270645263061652284::1782298695::0::1::::<><><>0<>0<><>::
+::res://::1782299824
+default_env.tres::Environment::2270645263061652284::1782299109::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1782225894::0::1::::<><><>0<>0<><>::
+GAME_DESIGN_DOCUMENT.md::TextFile::-1::1782299489::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D::7225514105660547850::1782225894::1782226018::1::::<><><>0<>0<>26a2552592ffb92fbb291a997d2f06f9<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 ::res://assets/::1782225895
 ::res://assets/font/::1782225895
@@ -64,7 +65,7 @@ player_idle.png::CompressedTexture2D::8081779863651599526::1782225896::178222601
 player_jump_down.png::CompressedTexture2D::1737976709518566930::1782225896::1782226018::1::::<><><>0<>0<>7fb08b5546dabf079ee9feaf5955047a<>res://.godot/imported/player_jump_down.png-32dc12bad1825b0935b4cc0dedde04f4.ctex::
 player_jump_up.png::CompressedTexture2D::3013407177851692142::1782225896::1782226018::1::::<><><>0<>0<>17561e6cce5969c2c085aac5d08f0802<>res://.godot/imported/player_jump_up.png-05bb24f9a246c7b54a53c39bd1caff8d.ctex::
 player_run.png::CompressedTexture2D::7159308915364906725::1782225896::1782226018::1::::<><><>0<>0<>85f02d30dac805ca998ce39353b51d44<>res://.godot/imported/player_run.png-eba97dd435c0dbcce957ade72dc1d4fe.ctex::
-::res://assets/textures/UI/::1782298693
+::res://assets/textures/UI/::1782298857
 button_hovered.png::CompressedTexture2D::5750991924348676538::1782225895::1782226018::1::::<><><>0<>0<>7d3bcd894f36772cce86d98e3ae3d151<>res://.godot/imported/button_hovered.png-24a98cb85f681cd31a52df552cce05c3.ctex::
 button_normal.png::CompressedTexture2D::6665333968603421857::1782225895::1782226018::1::::<><><>0<>0<>4503855e72fb26166a4e104daaceae47<>res://.godot/imported/button_normal.png-4b447378bc3bccc6994ad4be1d89ee02.ctex::
 button_pressed.png::CompressedTexture2D::2730267168827960789::1782225895::1782226018::1::::<><><>0<>0<>a01fba00ffe58f6dcd77df48eead5f24<>res://.godot/imported/button_pressed.png-ab254e48ca89d23b70ca241cd478b6b2.ctex::
@@ -77,13 +78,13 @@ options_pressed.png::CompressedTexture2D::8162772528142080242::1782225895::17822
 ::res://src/bullets/::1782226018
 PlayerBullet.gd::GDScript::5599098658068897719::1782226002::0::1::::<>Area2D<><>0<>0<><>::
 PlayerBullet.tscn::PackedScene::-1::1782226002::0::1::::<><><>0<>0<><>::res://src/bullets/PlayerBullet.gd<>res://assets/textures/player/bullet.png
-::res://src/Enemies/::1782226018
+::res://src/Enemies/::1782299109
 RunningEnemy.gd::GDScript::709608534997041358::1782226002::0::1::::Enemy<>CharacterBody2D<><>0<>0<><>::
-RunningEnemy.tscn::PackedScene::-1::1782226002::0::1::::<><><>0<>0<><>::res://src/Enemies/RunningEnemy.gd<>res://assets/textures/enemies/running_enemy_idle.png<>res://assets/textures/enemies/running_enemy_hurt.png<>res://assets/textures/enemies/running_enemy_jump.png<>res://assets/textures/enemies/running_enemy_run.png<>res://assets/sounds/dead.wav
-::res://src/Levels/::1782294028
+RunningEnemy.tscn::PackedScene::8003174289681799305::1782299109::0::1::::<><><>0<>0<><>::uid://kd0fcehqm3xq::::res://src/Enemies/RunningEnemy.gd<>uid://dxfclw5assl7f::::res://assets/textures/enemies/running_enemy_idle.png<>uid://b5dhongly40k5::::res://assets/textures/enemies/running_enemy_hurt.png<>uid://d11g6sw8niw53::::res://assets/textures/enemies/running_enemy_jump.png<>uid://devrw70ya3x67::::res://assets/textures/enemies/running_enemy_run.png<>uid://cog2g4fjf0jxa::::res://assets/sounds/dead.wav
+::res://src/Levels/::1782298950
 entities.gd::GDScript::956658768317069805::1782226002::0::1::::<>Node2D<><>0<>0<><>::
 Level_0.gd::GDScript::6887226041195518819::1782292944::0::1::::<>Control<><>0<>0<><>::
-Level_0.tscn::PackedScene::-1::1782294028::0::1::::<><><>0<>0<><>::res://src/Levels/Level_0.gd<>res://src/pick_ups/LittleCoin.tscn<>res://src/pick_ups/BigCoin.tscn<>res://assets/textures/bg.png<>res://src/Levels/entities.gd<>res://src/Wave/Spawner.tscn<>res://src/Enemies/RunningEnemy.tscn<>res://src/player/MapPlayer.tscn<>res://assets/font/fantasque-sans-mono/FantasqueSansMono-Regular.ttf<>res://assets/music/mainTheme.wav
+Level_0.tscn::PackedScene::-1::1782298950::0::1::::<><><>0<>0<><>::res://src/Levels/Level_0.gd<>res://src/pick_ups/LittleCoin.tscn<>res://src/pick_ups/BigCoin.tscn<>res://assets/textures/bg.png<>res://src/Levels/entities.gd<>res://src/Wave/Spawner.tscn<>res://src/Enemies/RunningEnemy.tscn<>res://src/player/MapPlayer.tscn<>res://assets/font/fantasque-sans-mono/FantasqueSansMono-Regular.ttf<>res://assets/music/mainTheme.wav
 ::res://src/Menus/::1782298842
 anim.gd::GDScript::5850918696739739427::1782226002::0::1::::<>AnimationPlayer<><>0<>0<><>::
 AnimatedDude.tscn::PackedScene::-1::1782226002::0::1::::<><><>0<>0<><>::res://assets/textures/player/player_idle.png<>res://src/Menus/anim.gd
